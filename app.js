@@ -39,12 +39,12 @@ const seattle = {
 seattle.calculateSales();
 console.log(seattle);
 
-const cookieSales = document.getElementById("cookie sales");
-const article = document.createElement("article");
+const cookieSalesSeattle = document.getElementById("cookieSalesSeattle");
+const articleSeattle = document.createElement("article");
 
 const h2 = document.createElement("h2");
 h2.textContent = seattle.location;
-article.appendChild(h2);
+articleSeattle.appendChild(h2);
 
 const ul = document.createElement("ul");
 for (let i = 0; i < hours.length; i++) {
@@ -52,9 +52,8 @@ for (let i = 0; i < hours.length; i++) {
   li.textContent = `${hours[i]}: ${seattle.cookiesPerHour[i]}`;
   ul.appendChild(li);
 }
-
-article.appendChild(ul);
-cookieSales.appendChild(article);
+articleSeattle.appendChild(ul);
+cookieSalesSeattle.appendChild(articleSeattle);
 
 //
 const tokyo = {
@@ -78,12 +77,12 @@ const tokyo = {
 tokyo.calculateSales();
 console.log(tokyo);
 
-const cookieSales1 = document.getElementById("cookie sales");
-const article1 = document.createElement("article");
+const cookieSalesTokyo = document.getElementById("cookieSalesTokyo");
+const articleTokyo = document.createElement("article");
 
 const h2a = document.createElement("h2");
 h2a.textContent = tokyo.location;
-article.appendChild(h2a);
+articleTokyo.appendChild(h2a);
 
 const ul1 = document.createElement("ul");
 for (let i = 0; i < hours.length; i++) {
@@ -92,8 +91,8 @@ for (let i = 0; i < hours.length; i++) {
   ul1.appendChild(li);
 }
 
-article1.appendChild(ul1);
-cookieSales.appendChild(article1);
+articleTokyo.appendChild(ul1);
+cookieSalesTokyo.appendChild(articleTokyo);
 
 //
 const dubai = {
@@ -117,12 +116,12 @@ const dubai = {
 dubai.calculateSales();
 console.log(dubai);
 
-const cookieSales2 = document.getElementById("cookie sales");
-const article2 = document.createElement("article");
+const cookieSalesDubai = document.getElementById("cookieSalesDubai");
+const articleDubai = document.createElement("article");
 
 const h2b = document.createElement("h2");
 h2b.textContent = dubai.location;
-article2.appendChild(h2b);
+articleDubai.appendChild(h2b);
 
 const ul2 = document.createElement("ul");
 for (let i = 0; i < hours.length; i++) {
@@ -131,8 +130,8 @@ for (let i = 0; i < hours.length; i++) {
   ul2.appendChild(li);
 }
 
-article2.appendChild(ul2);
-cookieSales.appendChild(article2);
+articleDubai.appendChild(ul2);
+cookieSalesDubai.appendChild(articleDubai);
 
 //
 const paris = {
@@ -156,22 +155,22 @@ const paris = {
 paris.calculateSales();
 console.log(paris);
 
-const cookieSales3 = document.getElementById("cookie sales");
-const article3 = document.createElement("article");
+const cookieSalesParis = document.getElementById("cookieSalesParis");
+const articleParis = document.createElement("article");
 
 const h2c = document.createElement("h2");
 h2c.textContent = paris.location;
-article3.appendChild(h2c);
+articleParis.appendChild(h2c);
 
 const ul3 = document.createElement("ul");
 for (let i = 0; i < hours.length; i++) {
   const li = document.createElement("li");
-  li.textContent = `${hours[i]}: ${dubai.cookiesPerHour[i]}`;
+  li.textContent = `${hours[i]}: ${paris.cookiesPerHour[i]}`;
   ul3.appendChild(li);
 }
 
-article3.appendChild(ul3);
-cookieSales.appendChild(article3);
+articleParis.appendChild(ul3);
+cookieSalesParis.appendChild(articleParis);
 
 //
 const lima = {
@@ -195,19 +194,19 @@ const lima = {
 lima.calculateSales();
 console.log(lima);
 
-const cookieSales4 = document.getElementById("cookie sales");
-const article4 = document.createElement("article");
+const cookieSalesLima = document.getElementById("cookieSalesLima");
+const articleLima = document.createElement("article");
 
 const h2d = document.createElement("h2");
 h2d.textContent = lima.location;
-article4.appendChild(h2d);
+articleLima.appendChild(h2d);
 
 const ul4 = document.createElement("ul");
 for (let i = 0; i < hours.length; i++) {
   const li = document.createElement("li");
-  li.textContent = `${hours[i]}: ${dubai.cookiesPerHour[i]}`;
+  li.textContent = `${hours[i]}: ${lima.cookiesPerHour[i]}`;
   ul4.appendChild(li);
 }
 
-article4.appendChild(ul4);
-cookieSales.appendChild(article4);
+articleLima.appendChild(ul4);
+cookieSalesLima.appendChild(articleLima);
