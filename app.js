@@ -31,7 +31,7 @@ const seattle = {
     for (let i = 0; i < hours.length; i++) {
       const randNum = randomNumber(this.minCust, this.maxCust);
       this.customersPerHour.push(randNum);
-      this.cookiesPerHour.push(randNum * this.avgCookiesPerCust);
+      this.cookiesPerHour.push(Math.floor(randNum * this.avgCookiesPerCust));
     }
   },
 };
@@ -39,7 +39,7 @@ const seattle = {
 seattle.calculateSales();
 console.log(seattle);
 
-const cookieSalesSeattle = document.getElementById("cookieSalesSeattle");
+const cookieSalesSeattle = document.getElementById("salesData");
 const articleSeattle = document.createElement("article");
 
 const h2 = document.createElement("h2");
@@ -69,7 +69,7 @@ const tokyo = {
     for (let i = 0; i < hours.length; i++) {
       const randNum = randomNumber(this.minCust, this.maxCust);
       this.customersPerHour.push(randNum);
-      this.cookiesPerHour.push(randNum * this.avgCookiesPerCust);
+      this.cookiesPerHour.push(Math.floor(randNum * this.avgCookiesPerCust));
     }
   },
 };
@@ -77,7 +77,7 @@ const tokyo = {
 tokyo.calculateSales();
 console.log(tokyo);
 
-const cookieSalesTokyo = document.getElementById("cookieSalesTokyo");
+const cookieSalesTokyo = document.getElementById("salesData");
 const articleTokyo = document.createElement("article");
 
 const h2a = document.createElement("h2");
@@ -108,7 +108,7 @@ const dubai = {
     for (let i = 0; i < hours.length; i++) {
       const randNum = randomNumber(this.minCust, this.maxCust);
       this.customersPerHour.push(randNum);
-      this.cookiesPerHour.push(randNum * this.avgCookiesPerCust);
+      this.cookiesPerHour.push(Math.floor(randNum * this.avgCookiesPerCust));
     }
   },
 };
@@ -116,7 +116,7 @@ const dubai = {
 dubai.calculateSales();
 console.log(dubai);
 
-const cookieSalesDubai = document.getElementById("cookieSalesDubai");
+const cookieSalesDubai = document.getElementById("salesData");
 const articleDubai = document.createElement("article");
 
 const h2b = document.createElement("h2");
@@ -147,7 +147,7 @@ const paris = {
     for (let i = 0; i < hours.length; i++) {
       const randNum = randomNumber(this.minCust, this.maxCust);
       this.customersPerHour.push(randNum);
-      this.cookiesPerHour.push(randNum * this.avgCookiesPerCust);
+      this.cookiesPerHour.push(Math.floor(randNum * this.avgCookiesPerCust));
     }
   },
 };
@@ -155,7 +155,7 @@ const paris = {
 paris.calculateSales();
 console.log(paris);
 
-const cookieSalesParis = document.getElementById("cookieSalesParis");
+const cookieSalesParis = document.getElementById("salesData");
 const articleParis = document.createElement("article");
 
 const h2c = document.createElement("h2");
@@ -186,7 +186,7 @@ const lima = {
     for (let i = 0; i < hours.length; i++) {
       const randNum = randomNumber(this.minCust, this.maxCust);
       this.customersPerHour.push(randNum);
-      this.cookiesPerHour.push(randNum * this.avgCookiesPerCust);
+      this.cookiesPerHour.push(Math.floor(randNum * this.avgCookiesPerCust));
     }
   },
 };
@@ -194,7 +194,7 @@ const lima = {
 lima.calculateSales();
 console.log(lima);
 
-const cookieSalesLima = document.getElementById("cookieSalesLima");
+const cookieSalesLima = document.getElementById("salesData");
 const articleLima = document.createElement("article");
 
 const h2d = document.createElement("h2");
