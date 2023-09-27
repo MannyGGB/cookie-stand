@@ -16,6 +16,7 @@ const hours = [
   "6pm",
   "7pm",
 ];
+const table = document.getElementById("salesData");
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -29,29 +30,23 @@ function Store(location, minCust, maxCust, avgCookiesPerCust) {
   this.totalCookieSold = 0;
 }
 Store.prototype.createStore = function () {
-  const salesData = document.getElementById("salesData");
-  const table = document.createElement("table");
-
-  const trHeader = document.createElement("tr");
-  const th = document.createElement("th");
-  th.textContent = `${hours}`;
-  table.appendChild(th);
-  table.appendChild(trHeader);
+  this.calculateSales();
 
   const tr = document.createElement("tr");
-  for (let i = 0; i < hours.length; i++) {
+  const th = document.createElement("th");
+  th.textContent = this.location;
+  tr.appendChild(th);
+  for (let i = 0; i < this.cookiesPerHour.length; i++) {
     const td = document.createElement("td");
-    td.textContent = `${this.location} ${this.cookiesPerHour[i]}`;
-    table.appendChild(td);
-    table.appendChild(tr);
+    td.textContent = this.cookiesPerHour[i];
+    tr.appendChild(td);
   }
-  const trFooter = document.createElement("tr");
-  const td = document.createElement("td");
-  td.textContent = `${this.totalCookieSold}`;
-  table.appendChild(td);
-  table.appendChild(trFooter);
+  table.appendChild(tr);
 
-  salesData.appendChild(table);
+  const totalTd = document.createElement("td");
+
+  totalTd.textContent = this.totalCookieSold;
+  tr.appendChild(totalTd);
 };
 Store.prototype.calculateSales = function () {
   // add a random number to the customersPerHour array
@@ -76,13 +71,22 @@ const dubai = new Store("dubai", 11, 38, 3.7);
 const paris = new Store("paris", 20, 38, 2.3);
 const lima = new Store("lima", 2, 16, 4.6);
 
-seattle.calculateSales();
+const headerRow = document.createElement("tr");
+const blankTd = document.createElement("td");
+headerRow.appendChild(blankTd);
+for (let i = 0; i < hours.length; i++) {
+  const th = document.createElement("th");
+  th.textContent = hours[i];
+  headerRow.appendChild(th);
+}
+const totalHeading = document.createElement("th");
+totalHeading.textContent = "Total";
+headerRow.appendChild(totalHeading);
+
+table.appendChild(headerRow);
+
 seattle.createStore();
-tokyo.calculateSales();
 tokyo.createStore();
-dubai.calculateSales();
 dubai.createStore();
-paris.calculateSales();
 paris.createStore();
-lima.calculateSales();
 lima.createStore();
