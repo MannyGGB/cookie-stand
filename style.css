@@ -3,21 +3,131 @@ body {
   background-color: salmon;
 }
 header {
+  width: 100%;
   background-color: seagreen;
+  display: flex;
+}
+header img {
+  max-width: 300px;
+  max-height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+h1 {
+  font-size: 2.5rem;
+  justify-content: center;
+  padding: 30px;
+}
+nav {
+  width: 100%;
+  display: flex;
+}
+nav button {
+  flex-direction: column;
+  padding: 20px;
+  width: 5rem;
+  background-color: salmon;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+nav button:hover {
+  animation: 300ms;
+  background-color: seashell;
 }
 main {
   width: 100%;
-  margin: 0 auto;
+}
+section h2 {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+div img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+}
+section h3 {
+  display: flex;
+  width: 100%;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul li {
+  list-style-image: url(./images/Iconarchive-Fish-Illustration-Brown-2-Fish.24.png);
 }
 footer {
   background-color: seagreen;
 }
-div {
-  display: flex;
-  justify-content: space-around;
+
+/* Sales page */
+table {
+  border: 2px solid seashell;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  margin-top: 2rem;
 }
-div > img {
+th {
+  border: 2px solid seashell;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+td {
+  border: 2px solid seashell;
+  font-size: 1rem;
+  text-align: center;
+}
+
+fieldset {
+  border: 2px solid seashell;
+  padding: 5px 5px 5px 5px;
   display: flex;
-  justify-content: center;
-  justify-content: space-around;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+fieldset legend {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+fieldset label {
+  width: 20rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+fieldset input {
+  width: 20rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+fieldset button {
+  width: 5rem;
+  background-color: seagreen;
+  text-align: center;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+fieldset button:hover {
+  animation: 300ms;
+  background-color: seashell;
 }

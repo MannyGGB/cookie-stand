@@ -44,8 +44,8 @@ Store.prototype.createStore = function () {
   table.appendChild(tr);
 
   const totalTd = document.createElement("td");
-
   totalTd.textContent = this.totalCookieSold;
+
   tr.appendChild(totalTd);
 };
 Store.prototype.calculateSales = function () {
@@ -85,8 +85,36 @@ headerRow.appendChild(totalHeading);
 
 table.appendChild(headerRow);
 
+const footerRow = document.createElement("tr");
+const totalCookiesHour = document.createElement("td");
+footerRow.appendChild(totalCookiesHour);
+for (let i = 0; i < this.cookiesPerHour; i++) {
+  for (let i = 0; i < hours.length; i++) {
+    const td = document.createElement("td");
+    td.textContent = cookiesPerHour[i];
+    footerRow.appendChild(td);
+  }
+  const totalFooter = document.createElement("td");
+  totalFooter.textContent = "Total per Hour";
+  footerRow.appendChild(totalFooter);
+}
+
 seattle.createStore();
 tokyo.createStore();
 dubai.createStore();
 paris.createStore();
 lima.createStore();
+
+const form = document.getElementById("newShop");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const location = event.target.location.value;
+  const minCust = event.target.minCust.value;
+  const maxCust = event.target.maxCust.value;
+  const avgCookiesPerCust = event.target.avgCookiesPerCust.value;
+
+  const newShop = new Store(location, +minCust, +maxCust, +avgCookiesPerCust); //adding the + makes sure the variable is a number
+
+  newShop.createStore();
+});

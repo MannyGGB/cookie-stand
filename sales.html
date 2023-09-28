@@ -5,20 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/fish.jpg" type="image/x-icon" />
     <script src="./app.js" defer></script>
     <title>Sales</title>
   </head>
   <body>
     <header>
+      <img src="./images/salmon.png" alt="Salmon" />
       <h1>Pat's Famous Salmon Cookies</h1>
       <nav>
-        <a href="./index.html">Home</a>
-        <a href="./sales.html">Sales</a>
+        <a href="./index.html"><button>Home</button></a>
+        <a href="./sales.html"><button>Sales</button></a>
       </nav>
     </header>
     <main></main>
     <table id="salesData"></table>
 
+    <form id="newShop">
+      <fieldset>
+        <legend>New Shop Creator</legend>
+        <label for="location">Shop Location</label>
+        <input name="location" id="location" required />
+        <label for="minCust">Minimum Customers per Hour</label>
+        <input name="minCust" type="number" id="minCust" required />
+        <label for="maxCust">Maximum Customers per Hour</label>
+        <input name="maxCust" type="number" id="maxCust" required />
+        <label for="avgCookiesPerCust">Average Cookies per Customer</label>
+        <input
+          name="avgCookiesPerCust"
+          type="number"
+          id="avgCookiesPerCust"
+          required
+        />
+        <button>Submit</button>
+      </fieldset>
+    </form>
     <!-- 
     Left by Rich - Ignore me if I'm confusing
       <table>
@@ -32,6 +53,8 @@
           <td>Table data</td>
         </tr>
       </tbody>
+      <tfooter>
+      </tfooter>
     </table> -->
 
     <footer></footer>
